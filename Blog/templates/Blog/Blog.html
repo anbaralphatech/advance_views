@@ -42,5 +42,18 @@
                     <a href="#">Baca Selengkapnya</a>   
                 </div>
             </div>
+            <!-- -----input----- -->
+            {% for posting in blogs %}
+            <div class="container-fluid">
+                <div class="contentBlog">
+                    <img class="contentBlog" src="{{posting.model_pic}}">               
+                    <h2>{{poting.Title}}/h2> 
+                    <p>{{posting.Content}}
+                    </p>
+                    <a href="#">Baca Selengkapnya</a>   
+                </div>
+            </div>
+            {%endfor%}
+
         <!-- END OF CONTENT 3 -->
 {%endblock%}

@@ -10,14 +10,14 @@ def Mentee(request):
 
 def db_mentee(request):
     mentee = Mentee.objects.all()
-    return render(request,'Mentee/db_mentee.html', {'mentees':mentee})
+    return render(request,'Mentee/Mentee.html', {'mentees':mentee})
 
 def input_post(request):
     if request.method == "POST":
-        form = PostForm(request.POST)
+        form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('db_mentee')
+            return redirect('Mentee')
     else:
         form = PostForm()
     return render(request,'Mentee/post_new.html', {'forms':form})

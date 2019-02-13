@@ -8,8 +8,6 @@
 
              
 {%block content%}
-
-
                 <!-- bagian isi -->
                 <div class="contentMentee">
                     <div class="mentee">
@@ -55,7 +53,23 @@
                             <br>
                         </div>
                     </div>
-
+                    <!-- ---- input------- -->
+                {% for paramentee in mentees%}
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="MenteePic">
+                                <img class="MenteePic" src="{{paramentee.model_pic}}">
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-6 col-12>">
+                            <h4>{{paramentee.name}}</h4>
+                            <p>{{paramentee.quotes}}</p>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                {%endfor%}
                 </div>
             </div>
         

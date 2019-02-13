@@ -8,7 +8,7 @@
 
              
 {%block content%}
-                <!-- bagian isi -->
+                <!-- bagian isi --> 
                 <div class="contentMentor">
                     <div class="mentor">
                         <h3>Our Mentor</h3><br>
@@ -55,9 +55,28 @@
                             <br>
                             <br>
                         </div>
-                    </div> 
+                    </div>
+                    <!-- ----------input---------- -->
+                    {% for paramentor in mentors %}
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="MentorPic">
+                            <img class="MentorPic" src="{{paramentor.model_pic}}">"
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-6 col-12>">
+                            <h4>{{paramentor.name}}</h4>
+                            <h5>{{paramentor.occupation}}</h5>
+                            <p>{{paramentor.quotes}}</p>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
 
                 </div>
             </div>
-            <!-- END OF PIC  -->
+            <!--END OF PIC  -->
 {%endblock%}
